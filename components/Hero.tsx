@@ -13,8 +13,8 @@ export default function Hero() {
             A splint printed <em>on the Moon.</em>
           </h1>
           <p className="lede">
-            We are Lunova, a high school team designing a custom-fit, 3D-printable splint for an astronaut with a partial
-            Achilles tear on a lunar base, where the nearest hospital is days away.
+            We are Lunova, a high school team designing OrthoPrint, a custom-fit, 3D-printable splint for an astronaut
+            with a lateral ankle ligament tear on a lunar base, where the nearest hospital is days away.
           </p>
           <div className="ctas">
             <Link className="btn primary" href="/design/">See the design</Link>

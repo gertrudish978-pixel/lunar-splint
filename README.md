@@ -4,7 +4,7 @@
 
 [![Lunar Splint Project website](docs/preview.jpg)](https://gertrudish978-pixel.github.io/lunar-splint/)
 
-Website for Lunova, a NASA HUNCH 2026–27 team taking on the Lunar Splint Design Challenge: a custom-fit, 3D-printable splint for an Achilles partial tear on a lunar base.
+Website for Lunova, a NASA HUNCH 2026–27 team taking on the Lunar Splint Design Challenge: OrthoPrint, a custom-fit, 3D-printable splint for a lateral ankle ligament tear on a lunar base.
 
 Built with Next.js (App Router) as a static export.
 

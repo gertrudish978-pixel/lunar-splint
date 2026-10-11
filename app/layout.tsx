@@ -11,7 +11,7 @@ const mono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "600"], variab
 export const metadata: Metadata = {
   title: "Lunova · Lunar Splint Project",
   description:
-    "A high school NASA HUNCH team designing a 3D-printable splint for an Achilles partial tear on a lunar base.",
+    "A high school NASA HUNCH team designing OrthoPrint, a 3D-printable splint for a lateral ankle ligament tear on a lunar base.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

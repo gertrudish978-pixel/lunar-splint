@@ -1,4 +1,4 @@
-import { deliverables, reviews } from "@/lib/content";
+import { deliverables, reviews, timeline } from "@/lib/content";
 import Pill from "./Pill";
 
 export default function Roadmap() {
@@ -7,10 +7,18 @@ export default function Roadmap() {
       <div className="wrap">
         <div className="head">
           <p className="eyebrow">Roadmap</p>
-          <h2>Five deliverables, three reviews</h2>
-          <p>The challenge asks for five deliverables, and HUNCH reviews the prototype at three stages.</p>
+          <h2>Timeline, deliverables and reviews</h2>
+          <p>Our project timeline from the team presentation, then the five deliverables the challenge asks for.</p>
         </div>
-        <div className="road">
+        <ol className="timeline">
+          {timeline.map((t) => (
+            <li key={t.when} className={t.done ? "done" : t.current ? "current" : undefined}>
+              <b>{t.when}</b>
+              <span>{t.what}</span>
+            </li>
+          ))}
+        </ol>
+        <div className="road spaced">
           <ol>
             {deliverables.map((d, i) => (
               <li key={d.title}>

@@ -56,7 +56,7 @@ export default function MassCalculator() {
           <span>vs. 80–150 g typical ankle splint</span>
         </div>
       </div>
-      <p className="note">Mass = (volume × infill + shell) × density. Defaults are our shell estimate.</p>
+      <p className="note">Mass = (volume × infill + shell) × density. Defaults are example numbers until our CAD is final.</p>
     </form>
   );
 }

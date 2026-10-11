@@ -1,10 +1,11 @@
-// Content for the site, taken from the team's challenge brief, purpose statement,
-// design notebook and assessment survey. Update statuses here as decisions are made.
+// Content for the site, taken from the team's challenge brief, design notebook, assessment survey,
+// NASA HUNCH presentation and Milestone 2 report (9/24/2026). Update statuses here as work moves.
 
-export type Status = "ok" | "wip" | "todo";
+export type Status = "ok" | "done" | "wip" | "todo";
 
 export const statusLabel: Record<Status, string> = {
   ok: "Decided",
+  done: "Done",
   wip: "In progress",
   todo: "Not started",
 };
@@ -45,66 +46,52 @@ export const constraints = [
   },
 ];
 
+export const prototypeName = "OrthoPrint";
+
 export const spec: { label: string; value: string; status?: Status }[] = [
-  { label: "Injury", value: "Achilles partial tear", status: "ok" },
-  { label: "Site", value: "Posterior ankle" },
-  { label: "Difficulty", value: "Advanced (highest of the five scenarios)" },
-  { label: "Habitat risk", value: "Moderate: repetitive movement during daily exercise" },
-  { label: "Fit", value: "Custom, generated from a scan of the patient's limb", status: "ok" },
+  { label: "Injury", value: "Lateral ankle ligament tear", status: "ok" },
+  { label: "Site", value: "Outer (lateral) side of the ankle" },
+  { label: "Healing time", value: "3–26 weeks, depending on severity" },
+  { label: "Habitat risk", value: "Moderate: rolled ankles on uneven habitat flooring" },
+  { label: "Fit", value: "Custom, printed on demand from a scan of the patient's limb", status: "ok" },
   {
-    label: "Lunar innovation",
-    value: "Both: a swelling-adaptive lattice liner and a single-piece ratchet closure",
-    status: "ok",
-  },
-  { label: "Position", value: "Foot held pointed down (about 20°) to unload the healing tendon" },
-  {
-    label: "Prototype material",
-    value: "PLA for the rigid shell, TPU (95A) for the lattice liner and ratchet strap",
+    label: "How it goes on",
+    value: "Unlatches and fits on vertically, then latches closed. Replaced an earlier slip-on sock design",
     status: "ok",
   },
   {
-    label: "Flight material",
-    value: "PEEK for the shell, medical-grade TPU for the liner and strap",
+    label: "Closure",
+    value: "Reusable, zip-tie style printed straps wrapped in an athletic-tape X pattern",
     status: "ok",
   },
-  { label: "Mass & print time", value: "≈ 144 g and ≈ 6.5 h (planning estimate, to confirm from CAD)", status: "wip" },
-  { label: "CAD", value: "Being modelled by a team member's brother", status: "wip" },
+  {
+    label: "Shell wall",
+    value: "Solid wall for support; small ventilation holes being re-tested",
+    status: "wip",
+  },
+  { label: "Prototype materials", value: "PLA, ABS and TPU (PETG also tested)", status: "wip" },
+  { label: "Flight material", value: "CF-PEEK (recommended)", status: "ok" },
+  { label: "CAD", value: "Detail drawing done 9/30/2026, model being refined", status: "wip" },
+  { label: "Mass & print time", value: "To be measured from the final CAD model", status: "todo" },
 ];
 
 export const innovations = [
   {
     tag: "Chosen",
-    name: "Swelling-adaptive lattice",
-    body: "A TPU gyroid liner that is softer over the swollen back of the ankle and firmer at the edges. It compresses as swelling rises in the first weeks, so the crew doesn't need to keep re-adjusting it. Inspired by the radiotherapy mesh mask and lattice boot.",
+    name: "Single-piece ratchet closure",
+    body: "Reusable, zip-tie style straps printed in one piece with no loose parts, so the astronaut can tighten or release them with one hand. They wrap the ankle in the X pattern athletic trainers use with tape, three times around.",
   },
   {
     tag: "Chosen",
-    name: "Single-piece ratchet closure",
-    body: "Printed toothed straps that click into a pawl on the shell, with no loose parts, screws or Velcro. The astronaut can tighten or release it with one hand to take the splint off for hygiene. Inspired by hose clamps and a reusable zip tie.",
+    name: "Integrated hygiene features",
+    body: "A breathable, sanitary design that can be cleaned and inspected during weeks of wear. We removed the large holes because they made the splint too flexible, and we are re-testing small, well-placed openings that avoid pressure points.",
   },
   {
-    tag: "Built in",
-    name: "Openings for skin and hygiene",
-    body: "The lattice and the open sides of the shell leave skin visible and ventilated, so it can be checked and cleaned during weeks of wear.",
-  },
-  {
-    tag: "Future",
-    name: "Rehab-progressive locking",
-    body: "A later version could add removable heel wedges to bring the foot back to neutral over the weeks, so one splint covers the whole recovery.",
+    tag: "Chosen",
+    name: "Thermal phase design",
+    body: "A TPU element that is flexible enough to wrap around the leg at habitat temperature and firm when needed. Our next test is finding the temperature at which the filament starts to soften instead of staying firm.",
   },
 ];
-
-// Planning estimate using the challenge brief's mass method, before the CAD model exists.
-export const massEstimate = {
-  parts: [
-    { part: "Rigid shell (posterior strut + footplate)", material: "PEEK", volume: 240, infill: 25, shell: 30, density: 1.32 },
-    { part: "Lattice liner", material: "TPU", volume: 60, infill: 15, shell: 0, density: 1.2 },
-    { part: "Ratchet straps (×3)", material: "TPU", volume: 12, infill: 100, shell: 0, density: 1.2 },
-  ],
-  printRate: 22, // g per hour, 0.6 mm nozzle, from typical FDM throughput
-  inventoryNote:
-    "Launching a fixed-size walking boot in six sizes for left and right feet would mean about 12 boots at roughly 1 kg each, or about $12M of launch mass, and none would be shaped to the patient.",
-};
 
 // Densities from the challenge brief's mass budget guide (g/cm³).
 export const materials = [
@@ -151,7 +138,7 @@ export const surveyCharts: {
       { label: "Arm", count: 14 },
       { label: "Fingers", count: 7 },
     ],
-    takeaway: "Nearly two-thirds picked the ankle, which backs our focus on the Achilles and ankle area.",
+    takeaway: "Nearly two-thirds picked the ankle, which backs our focus on an ankle ligament injury.",
   },
   {
     title: "Do medical devices help?",
@@ -195,22 +182,27 @@ export const concerns = [
 
 export const gallery = [
   {
+    src: "/images/research.jpg",
+    alt: "Presentation slide showing a 3D-printed cast with breathable holes and a radiotherapy mesh mask.",
+    caption: "3D-printed casts look sturdy and breathable, but a fully solid shell risks pressing on pressure points. That pushed us toward adjustable straps",
+    meta: "Research · presentation",
+  },
+  {
+    src: "/images/sketches.jpg",
+    alt: "Hand sketches of hole patterns and two splint designs, one with an adjustable buckle.",
+    caption: "Brainstorm sketches by Gertrudis Hernandez and Nancy De La Cruz: hole patterns, a one-size cast, and a design with an adjustable buckle",
+    meta: "Sketches · team",
+  },
+  {
     src: "/images/mesh-mask.jpg",
     alt: "Patient lying down wearing a white mesh radiotherapy mask molded to their face.",
     caption: "Radiotherapy mesh mask: a lattice molded to one person, which pointed us toward scan-to-fit",
     meta: "Web research · 8/19",
   },
   {
-    src: "/images/lattice-boot.jpg",
-    alt: "3D-printed white lattice ankle boot with blue sole and openings.",
-    caption: "Lattice ankle boot: openings and a fitted shell in one print",
-    meta: "Web research",
-    contain: true,
-  },
-  {
     src: "/images/hose-clamp.jpg",
     alt: "Stainless steel hose clamp with a slotted band.",
-    caption: "Hose clamp: a one-piece band that tightens in small steps, a model for a ratchet closure",
+    caption: "Hose clamp: a one-piece band that tightens in small steps. Together with a reusable zip tie, it led to our latch",
     meta: "Web research",
     contain: true,
   },
@@ -221,12 +213,6 @@ export const gallery = [
     meta: "Team photo · 9/18",
   },
   {
-    src: "/images/splint-sample.jpg",
-    alt: "Hand holding a thin flexible orange and blue splint material sample.",
-    caption: "Moldable splint material sample. Thinner and softer than we expected",
-    meta: "Team photo · 9/18",
-  },
-  {
     src: "/images/trainer-brace.jpg",
     alt: "Black ankle brace with straps lying on a table.",
     caption: "An older brace from the trainer's storage room, for comparison",
@@ -234,32 +220,92 @@ export const gallery = [
   },
 ];
 
+export const prototypeSlides = [
+  {
+    src: "/images/cad-sample.jpg",
+    alt: "CAD views of a square test sample with a grid of round holes.",
+    caption: "CAD test sample with a grid of round holes, used to compare flexibility",
+  },
+  {
+    src: "/images/prototype-samples.jpg",
+    alt: "Printed PETG and TPU test squares at 0.635 mm and 5.715 mm thick next to a quarter.",
+    caption: "Printed PETG and TPU samples at 0.635 mm and 5.715 mm thick",
+  },
+  {
+    src: "/images/testing.jpg",
+    alt: "Load tests hanging weights from printed samples, and a sample whose layers separated.",
+    caption: "Load testing with hanging weights. Weight began to separate the layers",
+  },
+  {
+    src: "/images/cad-drawing.jpg",
+    alt: "Engineering detail drawing of the splint with strap dimensions in millimetres, by Jose Hernandez, 9/30/2026.",
+    caption: "Detail drawing with strap dimensions in mm, by Jose P. Hernandez (9/30/2026)",
+  },
+];
+
+export const testResults = [
+  { sample: "PETG, holes", result: "Very flexible, but started to break after constant bending", outcome: "Rejected" },
+  { sample: "TPU, holes", result: "Layers started to separate under hanging weight", outcome: "Rejected" },
+  { sample: "Triangle hole pattern", result: "Did not hold up", outcome: "Rejected" },
+  { sample: "TPU, solid (no holes)", result: "Much less flexible, firm when bent, and moulds slightly to the finger", outcome: "Chosen" },
+  { sample: "Straps at key points", result: "Increased support and kept the ankle from moving", outcome: "Chosen" },
+];
+
+export const criteriaMet = [
+  "Can be fabricated on demand",
+  "Adequate immobilization",
+  "Printable on a habitat FDM or SLA printer",
+  "Long-term habitat wearability",
+  "At least one lunar-specific innovation",
+];
+
+export const nextSteps = [
+  "Change the thickness of the straps",
+  "Test the load at which the straps break",
+  "Find the temperature at which the filament softens",
+  "Re-test small ventilation holes against the solid wall",
+];
+
 export const deliverables: { title: string; body: string; status: Status }[] = [
   {
     title: "Biomechanics rationale",
-    body: "1–2 pages on how gravity, bone loss and long-term wear change the design. Our purpose statement is the starting point.",
+    body: "1–2 pages on how gravity, bone loss and long-term wear change the design for a lateral ankle ligament tear.",
     status: "wip",
   },
   {
     title: "Annotated concept sketch",
-    body: "Every feature labeled with its reason, with the innovation clearly marked. A first version is on this page.",
-    status: "wip",
+    body: "Brainstorm sketches and design concepts by Nancy and Gertrudis, with each feature labeled.",
+    status: "done",
   },
   {
     title: "CAD model with cross-section",
-    body: "Geometry, wall thickness, infill zones, closure and material.",
+    body: "Detail drawing finished 9/30/2026. The model is being refined after testing.",
     status: "wip",
   },
   {
     title: "Mass and print-time estimate",
-    body: "Grams of filament, launch cost and print time, justified against a fixed-size inventory. A planning estimate is on this page.",
-    status: "wip",
+    body: "Grams of filament, launch cost and print time, measured from the final CAD model.",
+    status: "todo",
   },
   {
     title: "Five-minute design review",
-    body: "Briefing the lunar base medical officer and defending every choice.",
-    status: "todo",
+    body: "Briefing the lunar base medical officer and defending every choice, starting at PDR.",
+    status: "wip",
   },
+];
+
+// Team project timeline, from our presentation.
+export const timeline: { when: string; what: string; done?: boolean; current?: boolean }[] = [
+  { when: "Aug", what: "Project selection: formed the team and chose the challenge", done: true },
+  { when: "Aug 21", what: "Proposal and objectives", done: true },
+  { when: "Sept", what: "Research and brainstorming", done: true },
+  { when: "Sept 18", what: "Concept decision signed", done: true },
+  { when: "Sept 24", what: "Milestone 2: solid prototype and new latch design", done: true },
+  { when: "Oct", what: "Prototype #1, testing and feedback", current: true },
+  { when: "Oct 21–22", what: "Preliminary Design Review, South Texas" },
+  { when: "Nov–Dec", what: "Prototype #2, testing, documentation and changes" },
+  { when: "Feb–Mar", what: "Final product and presentation" },
+  { when: "Mid-April", what: "NASA HUNCH evaluation" },
 ];
 
 // From the NASA HUNCH PDR/CDR/FDR calendar (times in GMT-5).
@@ -278,10 +324,16 @@ export const reviews = [
 
 export const teamName = "Lunova";
 
+export const school = "Gladys Porter Early College High School";
+
 export const team = [
-  { name: "Gertrudis Hernandez", photo: "/images/team/gertrudis.jpg", role: "Student engineer" },
-  { name: "Jose Hernandez", photo: "/images/team/jose.jpg", role: "Student engineer" },
-  { name: "Nancy De La Cruz", photo: "/images/team/nancy.jpg", role: "Student engineer" },
+  {
+    name: "Gertrudis Hernandez",
+    photo: "/images/team/gertrudis.jpg",
+    role: "Design coordination, expert outreach and latch research. Brainstorm sketches",
+  },
+  { name: "Jose P. Hernandez", photo: "/images/team/jose.jpg", role: "CAD detail drawings" },
+  { name: "Nancy De La Cruz", photo: "/images/team/nancy.jpg", role: "Sketches and designs. Athletic-trainer interview" },
 ];
 
 export const teachers = "Lupita C. Vasquez and Claudia Cortez";

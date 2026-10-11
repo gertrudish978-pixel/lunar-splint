@@ -1,4 +1,4 @@
-import { team, teachers, teamName } from "@/lib/content";
+import { school, team, teachers, teamName } from "@/lib/content";
 import { asset } from "@/lib/asset";
 
 export default function Team() {
@@ -22,6 +22,9 @@ export default function Team() {
         <div className="mentors">
           <span>
             <b>Teachers:</b> {teachers}
+          </span>
+          <span>
+            <b>School:</b> {school}
           </span>
           <span>
             <b>Program:</b> NASA HUNCH, Lunar Splint Design Challenge

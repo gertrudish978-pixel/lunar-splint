@@ -9,7 +9,7 @@ export default function Research() {
           <p className="eyebrow">Research &amp; inspiration</p>
           <h2>From our design notebook</h2>
           <p>
-            Our notebook runs from August 11 to September 18, 2026. Early on we realized a cast and a splint are
+            Our notebook started August 11, 2026. Early on we realized a cast and a splint are
             different things, and switched to a splint because that is what the challenge asks for. These are the ideas
             and samples that shaped our thinking.
           </p>
@@ -38,7 +38,8 @@ export default function Research() {
             <p className="eyebrow">What we learned</p>
             <p>
               A splint is for injuries that need almost no motion, while a brace allows some movement. She advised
-              making it firm and tight. Our next question for her is how a tendon tear like ours should be treated.
+              making it firm and tight. Her showing us an ankle brace for a rolled ankle is what pointed us to our
+              ligament-tear scenario, and the X pattern trainers tape ankles with now shapes our straps.
             </p>
           </div>
         </div>

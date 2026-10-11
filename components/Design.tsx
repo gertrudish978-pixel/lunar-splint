@@ -1,7 +1,6 @@
-import { innovations, spec } from "@/lib/content";
-import ConceptSketch from "./ConceptSketch";
+import { criteriaMet, innovations, nextSteps, prototypeName, prototypeSlides, spec, testResults } from "@/lib/content";
+import { asset } from "@/lib/asset";
 import MassCalculator from "./MassCalculator";
-import MassEstimate from "./MassEstimate";
 import Pill from "./Pill";
 
 export default function Design() {
@@ -9,13 +8,12 @@ export default function Design() {
     <section id="design">
       <div className="wrap">
         <div className="head">
-          <p className="eyebrow">Our scenario</p>
-          <h2>Achilles partial tear</h2>
+          <p className="eyebrow">Our scenario · {prototypeName}</p>
+          <h2>Lateral ankle ligament tear</h2>
           <p>
-            We chose the hardest scenario in the brief. The Achilles tendon connects the calf to the heel, and our
-            purpose statement notes that in low gravity the calf-muscle unit stores and releases far less elastic
-            energy. Our goal is a splint that is lightweight, adjustable, fits any user&apos;s limb geometry and is
-            strong enough for long-term habitat use.
+            A rolled ankle on uneven habitat flooring can tear the ligaments on the outer side of the ankle, and healing
+            takes 3 to 26 weeks. Our splint, {prototypeName}, is printed from a scan of the astronaut&apos;s leg,
+            unlatches to fit on vertically, and holds the ankle firm with reusable straps.
           </p>
         </div>
         <div className="two">
@@ -38,8 +36,7 @@ export default function Design() {
           <div>
             <h3>Our lunar innovations</h3>
             <p className="sub">
-              The brief requires at least one lunar-specific innovation built into the geometry. We combine two, which the
-              brief encourages, and both come straight from our notebook research.
+              The brief requires at least one lunar-specific innovation. We picked three from the brief&apos;s list.
             </p>
             <div className="innov">
               <ul>
@@ -55,39 +52,66 @@ export default function Design() {
           </div>
         </div>
 
-        <div className="two spaced">
+        <div className="spaced">
           <div className="prose">
-            <p className="eyebrow">Concept sketch</p>
-            <h3>How the pieces fit together</h3>
+            <p className="eyebrow">Prototype #1 &amp; testing</p>
+            <h3>What we printed, and what broke</h3>
             <p>
-              A rigid shell runs down the back of the calf, behind the heel and under the foot, and holds the foot
-              pointed down so the healing tendon stays slack. The lattice liner sits between shell and skin, and three
-              ratchet straps close it. Our CAD model will follow this layout.
+              We printed test samples in PETG and TPU, bent them, and hung weights from them. Holes made the samples
+              too flexible, so the shell is now solid and the straps carry the support.
             </p>
           </div>
-          <ConceptSketch />
+          <div className="gallery spaced-sm">
+            {prototypeSlides.map((g) => (
+              <figure key={g.src}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={asset(g.src)} alt={g.alt} loading="lazy" />
+                <figcaption>{g.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
 
-        <div className="stack spaced">
+        <div className="two spaced">
+          <div className="spec">
+            <header>
+              <span>Test results</span>
+              <span>Oct 2026</span>
+            </header>
+            <dl>
+              {testResults.map((t) => (
+                <div key={t.sample} style={{ display: "contents" }}>
+                  <dt>{t.sample}</dt>
+                  <dd>
+                    {t.result} <Pill status={t.outcome === "Chosen" ? "ok" : "todo"} label={t.outcome} />
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <div className="prose">
+            <h3>Criteria it meets</h3>
+            <ul className="checks">
+              {criteriaMet.map((c) => (
+                <li key={c}>{c}</li>
+              ))}
+            </ul>
+            <h3>Next tests</h3>
+            <ul>
+              {nextSteps.map((c) => (
+                <li key={c}>{c}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="two spaced">
           <div className="prose">
             <p className="eyebrow">Mass &amp; print time</p>
-            <h3>About 144 grams, printed in under 7 hours</h3>
-            <p>
-              We estimated each part with the brief&apos;s mass method. The full splint lands inside the typical
-              80–150 g range for an ankle splint, and prints well inside the 4–8 hour window.
-            </p>
-          </div>
-          <MassEstimate />
-        </div>
-
-        <div className="two spaced">
-          <div className="prose">
-            <p className="eyebrow">Try it yourself</p>
             <h3>Every gram costs $1,000</h3>
             <p>
-              The brief asks every team to estimate filament mass and its launch cost, then argue why printing one
-              custom splint beats launching a full set of fixed sizes. This calculator follows the brief&apos;s
-              five-step method. It starts with our shell numbers; change them to see how mass and cost move.
+              Our real mass and print time will come from the final CAD model. Until then, this calculator follows the
+              brief&apos;s five-step method with example numbers; change them to see how mass and launch cost move.
             </p>
           </div>
           <MassCalculator />
