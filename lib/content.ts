@@ -370,7 +370,7 @@ export const team = [
     role: "Design coordinator, expert outreach and brainstorm sketches",
   },
   { name: "Jose P. Hernandez", photo: "/images/team/jose.jpg", role: "CAD, technical drawings, software engineer and 3D printing specialist" },
-  { name: "Nancy De La Cruz", photo: "/images/team/nancy.jpg", role: "Prototype tester and managing editor. Sketches and designs" },
+  { name: "Nancy De La Cruz", photo: "/images/team/nancy.jpg", role: "Prototype tester, managing editor, sketches and designs" },
 ];
 
 export const teachers = "Lupita C. Vasquez and Claudia Cortez";
