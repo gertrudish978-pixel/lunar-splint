@@ -367,7 +367,7 @@ export const team = [
   {
     name: "Gertrudis Hernandez",
     photo: "/images/team/gertrudis.jpg",
-    role: "Design coordination, expert outreach and latch research. Brainstorm sketches. Athletic-trainer interview",
+    role: "Design coordinator, expert outreach and brainstorm sketches",
   },
   { name: "Jose P. Hernandez", photo: "/images/team/jose.jpg", role: "CAD, technical drawings, software engineer and 3D printing specialist" },
   { name: "Nancy De La Cruz", photo: "/images/team/nancy.jpg", role: "Prototype tester and managing editor. Sketches and designs" },
