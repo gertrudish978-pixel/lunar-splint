@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Big_Shoulders, JetBrains_Mono, Source_Sans_3 } from "next/font/google";
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 import "./globals.css";
 
 const display = Big_Shoulders({ subsets: ["latin"], weight: ["600", "800"], variable: "--nf-display" });
@@ -15,7 +17,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <a className="skip" href="#main">Skip to content</a>
+        <Nav />
+        <div id="main">{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }

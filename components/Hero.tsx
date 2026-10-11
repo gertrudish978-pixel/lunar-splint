@@ -1,4 +1,5 @@
 import { heroStats, pdr } from "@/lib/content";
+import Link from "next/link";
 import Countdown from "./Countdown";
 import { asset } from "@/lib/asset";
 
@@ -16,8 +17,8 @@ export default function Hero() {
             Achilles tear on a lunar base, where the nearest hospital is days away.
           </p>
           <div className="ctas">
-            <a className="btn primary" href="#design">See the design</a>
-            <a className="btn" href="#survey">Read our survey</a>
+            <Link className="btn primary" href="/design/">See the design</Link>
+            <Link className="btn" href="/survey/">Read our survey</Link>
           </div>
         </div>
         <figure>

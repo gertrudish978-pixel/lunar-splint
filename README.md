@@ -18,7 +18,7 @@ npm run build   # static site in out/
 
 ## Editing content
 
-Most text, survey numbers, the spec sheet and deliverable statuses are in `lib/content.ts`. Change a status (`"ok"`, `"wip"`, `"todo"`) there when the team makes a decision. Photos live in `public/images/`.
+Each section is its own page under `app/` (challenge, design, survey, research, roadmap, team). Most text, survey numbers, the spec sheet and deliverable statuses are in `lib/content.ts`. Change a status (`"ok"`, `"wip"`, `"todo"`) there when the team makes a decision. Photos live in `public/images/`.
 
 ## Deploying
 
