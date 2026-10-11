@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { requirements } from "@/lib/content";
+import type { FlipItem } from "@/lib/content";
 
-// A card that flips like a page: the front names the six requirements, the back lists them.
-export default function RequirementsCard() {
+// A card that flips over on click: a big number on the front, the full list on the back.
+export default function FlipCard({ value, label, heading, items }: { value: string; label: string; heading: string; items: FlipItem[] }) {
   const [flipped, setFlipped] = useState(false);
+  const toggle = () => setFlipped((f) => !f);
 
   return (
     <div className={`flip${flipped ? " flipped" : ""}`}>
@@ -14,26 +15,27 @@ export default function RequirementsCard() {
         tabIndex={0}
         className="flip-inner"
         aria-pressed={flipped}
-        onClick={() => setFlipped((f) => !f)}
+        onClick={toggle}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
-            setFlipped((f) => !f);
+            toggle();
           }
         }}
       >
         <div className="flip-face flip-front" aria-hidden={flipped}>
-          <span className="eyebrow">From the student brief</span>
-          <b>6</b>
-          <strong>Design requirements we must meet</strong>
-          <span className="flip-hint">Click to flip the page ↻</span>
+          <b>{value}</b>
+          <strong>{label}</strong>
+          <span className="flip-hint">Click to flip ↻</span>
         </div>
         <div className="flip-face flip-back" aria-hidden={!flipped}>
-          <span className="eyebrow">The 6 design requirements</span>
+          <span className="eyebrow">{heading}</span>
           <ol>
-            {requirements.map((r) => (
-              <li key={r.title}>
-                <strong>{r.title}</strong>
+            {items.map((r) => (
+              <li key={r.title} className={r.badge === "Our pick" ? "pick" : undefined}>
+                <strong>
+                  {r.title} {r.badge && <em>{r.badge}</em>}
+                </strong>
                 <span>{r.body}</span>
               </li>
             ))}

@@ -16,15 +16,29 @@ export const heroStats = [
   { value: "1/6 g", label: "lunar gravity: about 83% less load along the bone" },
 ];
 
-export const challengeFigures = [
-  { value: "5", label: "injury scenarios to choose from" },
-  { value: "6", label: "design requirements to meet" },
-  { value: "100", label: "point judging rubric" },
-  { value: "80–150 g", label: "filament in a typical ankle splint" },
+// Brief facts shown as flip cards on the Challenge page; the back of each card lists the details.
+export type FlipItem = { title: string; body: string; badge?: string };
+
+export const scenarios: FlipItem[] = [
+  { title: "Stress fracture", body: "Tibia, fibula or metatarsals. High risk from bone density loss. Intermediate." },
+  { title: "Acute fall fracture", body: "Wrist, forearm, ankle or clavicle. High risk from habitat furniture and equipment. Beginner–intermediate." },
+  { title: "Finger fracture / dislocation", body: "PIP and DIP joints. Moderate–high risk from fine motor tasks. Beginner." },
+  { title: "Lateral ankle ligament tear", body: "Outer ankle. Moderate risk from uneven habitat flooring. Intermediate.", badge: "Our pick" },
+  { title: "Achilles partial tear", body: "Back of the ankle. Moderate risk from repetitive movement in the habitat. Advanced." },
 ];
 
+export const rubric: FlipItem[] = [
+  { title: "Biomechanics accuracy", body: "Addresses 1/6 g, bone density loss, the habitat and long-term wear for the chosen injury.", badge: "25 pts" },
+  { title: "Novelty & justification", body: "The innovation is well reasoned, clearly described and built into the design.", badge: "25 pts" },
+  { title: "Design completeness", body: "Geometry, wall thickness, closure, infill, material and fit are all covered.", badge: "20 pts" },
+  { title: "Mass & printability", body: "Realistic filament mass, print time considered, material justified for the habitat.", badge: "15 pts" },
+  { title: "Presentation & defense", body: "Clear, confident answers, presented as if to the crew medical officer.", badge: "15 pts" },
+];
+
+export const splintMass = { value: "80–150 g", label: "filament in a typical ankle splint" };
+
 // The six design requirements, from section 4 of the student brief.
-export const requirements = [
+export const requirements: FlipItem[] = [
   { title: "Adequate immobilization", body: "Immobilizes the chosen injury in 1/6 gravity, accounting for the altered force mechanics." },
   { title: "Printable in the habitat", body: "Prints on a habitat FDM or SLA printer in ABS, PLA or TPU for prototypes, with a flight-grade material (PEEK, TPU or CF-PEEK) chosen and justified." },
   { title: "Long-term wearability", body: "Worn for weeks: skin contact, hygiene, ventilation, one-handed operation and skin breakdown are all considered." },
