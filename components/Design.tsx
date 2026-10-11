@@ -1,4 +1,4 @@
-import { criteriaMet, innovations, nextSteps, prototypeName, prototypeSlides, spec, testResults } from "@/lib/content";
+import { criteriaMet, designEvolution, innovations, materialsUsed, nextSteps, prosCons, prototypeName, prototypeSlides, spec, testResults } from "@/lib/content";
 import { asset } from "@/lib/asset";
 import MassCalculator from "./MassCalculator";
 import Pill from "./Pill";
@@ -52,7 +52,55 @@ export default function Design() {
           </div>
         </div>
 
-        <div className="spaced">
+        <div className="spaced" id="evolution">
+          <div className="prose">
+            <p className="eyebrow">Brainstorming &amp; design evolution</p>
+            <h3>From concept 1 to our preliminary design</h3>
+            <p>How the design changed between our first sketches and the PDR, and why.</p>
+          </div>
+          <div className="two spaced-sm">
+            <figure className="framed">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={asset("/images/sketches.jpg")} alt="Brainstorm sketches: hole patterns, a one-size cast and a two-piece design with an adjustable buckle." loading="lazy" />
+              <figcaption>Brainstorm sketches by Gertrudis Hernandez and Nancy De La Cruz</figcaption>
+            </figure>
+            <ol className="evolution">
+              {designEvolution.map((e) => (
+                <li key={e.title}>
+                  <span className="mono">{e.step}</span>
+                  <strong>{e.title}</strong>
+                  <span>{e.body}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="proscons spaced-sm">
+            <p className="eyebrow">Strongest idea · pros &amp; cons</p>
+            <div>
+              <span><b>Pros:</b> {prosCons.pros.join(", ")}</span>
+              <span><b>Cons:</b> {prosCons.cons.join(", ")}</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="spaced" id="materials">
+          <div className="spec">
+            <header>
+              <span>Materials</span>
+              <span>Prototype &amp; flight</span>
+            </header>
+            <dl>
+              {materialsUsed.map((m) => (
+                <div key={m.name} style={{ display: "contents" }}>
+                  <dt>{m.name}</dt>
+                  <dd>{m.use}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+
+        <div className="spaced" id="testing">
           <div className="prose">
             <p className="eyebrow">Prototype #1 &amp; testing</p>
             <h3>What we printed, and what broke</h3>

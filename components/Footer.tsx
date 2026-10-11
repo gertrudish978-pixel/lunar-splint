@@ -1,3 +1,5 @@
+import { digitalRecords } from "@/lib/content";
+
 const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 
 export default function Footer() {
@@ -27,7 +29,11 @@ export default function Footer() {
         <div>
           <h3>Project</h3>
           <ol className="plain">
-            <li><a href="https://canva.link/won8fe9ftw6rgqg" {...ext}>Our presentation deck (Canva)</a></li>
+            {digitalRecords.map((r) => (
+              <li key={r.href}>
+                <a href={r.href} {...ext}>{r.label}</a>
+              </li>
+            ))}
             <li><a href="https://www.nasahunch.com/" {...ext}>About NASA HUNCH</a></li>
             <li>
               <a href="https://makerworld.com/en/models/236391-reusable-zip-tie" {...ext}>

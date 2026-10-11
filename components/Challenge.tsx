@@ -1,4 +1,4 @@
-import { constraints, massSteps, requirements, rubric, scenarios, splintMass } from "@/lib/content";
+import { constraints, massSteps, problemStatement, problemsToAvoid, requirements, rubric, scenarios, splintMass, teamNeeds } from "@/lib/content";
 import FlipCard from "./FlipCard";
 
 export default function Challenge() {
@@ -14,7 +14,13 @@ export default function Challenge() {
             scan of the injured astronaut.
           </p>
         </div>
-        <div className="two">
+        <div className="problem" id="problem">
+          <p className="eyebrow">Problem statement</p>
+          {problemStatement.map((p) => (
+            <p key={p}>{p}</p>
+          ))}
+        </div>
+        <div className="two spaced-sm" id="requirements">
           <div>
             <div className="flips">
               <FlipCard value="5" label="injury scenarios to choose from" heading="The 5 injury scenarios" items={scenarios} />
@@ -39,6 +45,30 @@ export default function Challenge() {
             on limbs that have changed in space. No splint exists yet that is designed for the lunar environment.
             That is the gap we are designing for.
           </p>
+          </div>
+        </div>
+        <div className="two spaced" id="criteria">
+          <div>
+            <p className="eyebrow">Our criteria</p>
+            <h3>What we need</h3>
+            <ul className="needs">
+              {teamNeeds.map((n) => (
+                <li key={n.title}>
+                  <strong>{n.title}</strong>
+                  <span>{n.body}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="eyebrow">Our constraints</p>
+            <h3>Problems to avoid</h3>
+            <ul className="avoid">
+              {problemsToAvoid.map((n) => (
+                <li key={n}>{n}</li>
+              ))}
+            </ul>
+            <p className="sub">On top of these, the Moon itself adds four constraints:</p>
           </div>
         </div>
         <div className="constraints">

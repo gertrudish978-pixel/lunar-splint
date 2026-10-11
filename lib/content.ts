@@ -374,3 +374,89 @@ export const team = [
 ];
 
 export const teachers = "Lupita C. Vasquez and Claudia Cortez";
+
+// Presentation header fields the PDR asks for. No team number has been given yet.
+export const nasaProject = "Lunar Splint Design Challenge";
+export const nasaRequester = "NASA Exploration Medical Integrated Product Team (XMIPT)";
+export const teamNumber: string | null = null;
+export const siteUrl = "https://gertrudish978-pixel.github.io/lunar-splint/";
+
+// The team's own shared documents, linked from the last slide of our presentation.
+export const digitalRecords = [
+  { label: "Engineering notebook (D.A.A.N.)", href: "https://docs.google.com/document/d/1hKhcNnmtno6e4WYorjXT1Oe3MqVzv_eXaMi5e8vBHBI/edit?usp=sharing" },
+  { label: "Problem statement", href: "https://docs.google.com/document/d/1np4IYU2kg3Toc2JTO7HXkjL3HSx_v_YMV_1JqnkxwXY/edit?usp=sharing" },
+  { label: "Assessment survey results", href: "https://docs.google.com/document/d/1bgVcsqcsD2ueFd9Aoes3MxxKUOwubQQHS9IAxuHU4xI/edit?usp=sharing" },
+  { label: "Presentation deck (Canva)", href: "https://canva.link/won8fe9ftw6rgqg" },
+];
+
+// Problem statement, from our presentation.
+export const problemStatement = [
+  "Astronauts on a lunar base face a high and poorly understood risk of musculoskeletal injury, and when an injury occurs, a return to Earth takes days at minimum.",
+  "Launching a set of Earth splints in different sizes and types would take up valuable launch mass and may not be efficient, given how different activities on the Moon are from those on Earth.",
+  "A custom 3D-printable splint is needed that can be fabricated on demand from a patient scan, fit any limb geometry, survive long-term habitat use and stay within a justifiable mass budget, all without resupply from Earth.",
+];
+
+// Our criteria and constraints slide.
+export const teamNeeds = [
+  { title: "Comfortable", body: "For a lateral ankle ligament tear, worn for 3–26 weeks." },
+  { title: "Self-applicable", body: "Put on and taken off with one hand." },
+  { title: "Durable", body: "Space missions last about 6 months." },
+  { title: "Safe and material-efficient", body: "Withstands the conditions of a space mission with no safety hazards." },
+  { title: "Customized", body: "Fits the injured astronaut closely and comfortably." },
+  { title: "Lunar-specific innovation", body: "At least one innovation from the brief's list." },
+];
+
+export const problemsToAvoid = [
+  "Limited space",
+  "Limited mass",
+  "Limited tools and materials",
+  "Budget",
+  "Limits of the 3D printer",
+];
+
+// How the design changed from the first sketches to the PDR design (presentation, notebook and Milestone 2 report).
+export const designEvolution = [
+  { step: "Concept 1", title: "One-size cast", body: "A solid cast covering the ankle. We learned a cast and a splint are different things and switched to a splint, which is what the challenge asks for." },
+  { step: "Concept 2", title: "Adjustable buckle", body: "A two-piece design with an adjustable buckle and beta cloth, so it could allow the movement needed to keep working on a mission." },
+  { step: "Hole patterns", title: "Circles and triangles", body: "We sketched and printed breathable hole patterns. The triangle pattern failed, and round holes made the samples too flexible." },
+  { step: "Change", title: "Holes removed", body: "The wall is now solid because it gave much better support. Small, well-placed holes will be re-tested." },
+  { step: "Change", title: "Sock to latch", body: "The first design slid onto the leg like a sock. It now unlatches and fits on vertically." },
+  { step: "Change", title: "Clip to zip-tie straps", body: "A clip-on latch was too complex to design, so we switched to reusable zip-tie style straps, wrapped in the X pattern athletic trainers use with tape." },
+];
+
+export const prosCons = { pros: ["Breathable", "Sanitary", "Adjustable"], cons: ["Uses a lot of material"] };
+
+// Materials we have used or plan to use, with the reason the team gave where it gave one.
+export const materialsUsed = [
+  { name: "PLA", use: "Prototype 1" },
+  { name: "ABS", use: "Prototype 2" },
+  { name: "TPU", use: "Prototype 3. Flexible enough to wrap around the leg without breaking, and firm when printed solid" },
+  { name: "PETG", use: "Tested. Very flexible, but started to break after constant bending" },
+  { name: "CF-PEEK", use: "Recommended material for the flight version" },
+];
+
+// What the PDR (Design Review Expectations) and the Weeks 5 & 6 objectives ask the website to show.
+export const pdrChecklist: { item: string; href?: string; status: Status; note?: string }[] = [
+  { item: "Presentation header", href: "#header", status: "wip", note: "Team number still needed" },
+  { item: "Team", href: "/team/", status: "done" },
+  { item: "Presentation board (tri-fold)", status: "todo", note: "Add a photo once the board is made" },
+  { item: "Engineering notebook (D.A.A.N.)", href: digitalRecords[0].href, status: "done" },
+  { item: "Problem statement", href: "/challenge/#problem", status: "done" },
+  { item: "Criteria and constraints", href: "/challenge/#criteria", status: "done" },
+  { item: "Requirements", href: "/challenge/#requirements", status: "done" },
+  { item: "Brainstorming 1", href: "/design/#evolution", status: "done" },
+  { item: "Research and reference list", href: "/research/", status: "done" },
+  { item: "Brainstorming 2", href: "/design/#evolution", status: "wip", note: "Pros and cons of the strongest idea so far" },
+  { item: "Diagrams of the three best concepts", status: "todo", note: "Two concepts sketched so far" },
+  { item: "Decision matrix", status: "todo" },
+  { item: "Prototype design, concept 1 to preliminary design", href: "/design/#evolution", status: "done" },
+  { item: "Drawings with measurements", href: "/design/#testing", status: "done" },
+  { item: "Materials and why we chose them", href: "/design/#materials", status: "wip", note: "Reason for CF-PEEK still needed" },
+  { item: "Testing data", href: "/design/#testing", status: "wip", note: "Preliminary tests" },
+  { item: "Market survey (optional)", href: "/survey/", status: "done" },
+  { item: "Patent search (optional)", status: "todo" },
+  { item: "Next steps and schedule", href: "/roadmap/", status: "done" },
+  { item: "Prototype video and presentation video", status: "todo" },
+  { item: "Brochure with QR code", status: "todo", note: "The QR code above is ready to use" },
+  { item: "Materials list and budget", status: "todo" },
+];

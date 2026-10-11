@@ -6,4 +6,5 @@ export const pages = [
   { slug: "research", label: "Research", blurb: "Photos and notes from our design notebook and athletic-trainer interview." },
   { slug: "roadmap", label: "Roadmap", blurb: "Our timeline, the five deliverables and the path through PDR, CDR and FDR." },
   { slug: "team", label: "Team", blurb: "Meet Team Lunova and our teachers." },
+  { slug: "pdr", label: "PDR", blurb: "Our presentation header, digital records, QR code and PDR checklist." },
 ] as const;
