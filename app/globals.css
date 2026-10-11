@@ -255,3 +255,21 @@ footer ol.plain{list-style:none;padding:0}
 .timeline li.current{font-weight:600}
 .timeline b{font-family:var(--font-mono);font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
 @media (max-width:520px){.timeline li{grid-template-columns:1fr;gap:2px}}
+/* Flip card: both faces share one grid cell so the card is as tall as the longer face. */
+.flip{perspective:1600px;margin-top:40px}
+.flip-inner{display:grid;width:100%;cursor:pointer;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,.7,.2,1);transform-origin:center}
+.flip.flipped .flip-inner{transform:rotateY(-180deg)}
+.flip-inner:focus-visible{outline:2px solid var(--peek);outline-offset:4px;border-radius:4px}
+.flip-face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--peek);border-radius:4px;padding:28px 32px;display:flex;flex-direction:column;gap:10px;box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.flip-front{justify-content:center;align-items:flex-start;min-height:220px}
+.flip-front b{font:800 5rem/1 var(--font-display);color:var(--peek)}
+.flip-front strong{font:800 1.8rem/1.1 var(--font-display);text-transform:uppercase;color:var(--ink)}
+.flip-back{transform:rotateY(180deg);border-left:1px solid var(--line);border-right:6px solid var(--peek)}
+.flip-back ol{margin:4px 0 0;padding:0;list-style:none;counter-reset:req;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
+.flip-back li{counter-increment:req;display:grid;align-content:start;grid-template-columns:34px 1fr;column-gap:10px;color:var(--ink)}
+.flip-back li::before{content:counter(req,decimal-leading-zero);grid-row:span 2;font:800 1.5rem/1 var(--font-display);color:var(--peek)}
+.flip-back li strong{font-weight:700}
+.flip-back li span{color:var(--muted);font-size:.93rem}
+.flip-hint{font:600 .74rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+@media (max-width:700px){.flip-back ol{grid-template-columns:1fr}.flip-face{padding:22px 20px}}
+@media (prefers-reduced-motion:reduce){.flip-inner{transition:none}}

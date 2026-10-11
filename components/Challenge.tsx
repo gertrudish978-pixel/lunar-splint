@@ -1,4 +1,5 @@
 import { challengeFigures, constraints } from "@/lib/content";
+import RequirementsCard from "./RequirementsCard";
 
 export default function Challenge() {
   return (
@@ -44,6 +45,7 @@ export default function Challenge() {
             </p>
           </div>
         </div>
+        <RequirementsCard />
         <div className="constraints">
           {constraints.map((c) => (
             <article key={c.title}>

@@ -23,6 +23,16 @@ export const challengeFigures = [
   { value: "80–150 g", label: "filament in a typical ankle splint" },
 ];
 
+// The six design requirements, from section 4 of the student brief.
+export const requirements = [
+  { title: "Adequate immobilization", body: "Immobilizes the chosen injury in 1/6 gravity, accounting for the altered force mechanics." },
+  { title: "Printable in the habitat", body: "Prints on a habitat FDM or SLA printer in ABS, PLA or TPU for prototypes, with a flight-grade material (PEEK, TPU or CF-PEEK) chosen and justified." },
+  { title: "Long-term wearability", body: "Worn for weeks: skin contact, hygiene, ventilation, one-handed operation and skin breakdown are all considered." },
+  { title: "Lunar-specific innovation", body: "At least one innovation from the brief's list (A–E), built into the design rather than just mentioned." },
+  { title: "Material justification", body: "Material choice backed against biocompatibility, long-term skin contact, cleaning and sterilization, and habitat temperatures." },
+  { title: "Mass budget", body: "Filament mass in grams and its launch cost at about $1M/kg, with a case for why it beats a simpler alternative." },
+];
+
 export const constraints = [
   {
     tag: "1/6 gravity",
