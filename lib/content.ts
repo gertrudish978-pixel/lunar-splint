@@ -369,8 +369,8 @@ export const team = [
     photo: "/images/team/gertrudis.jpg",
     role: "Design coordination, expert outreach and latch research. Brainstorm sketches. Athletic-trainer interview",
   },
-  { name: "Jose P. Hernandez", photo: "/images/team/jose.jpg", role: "CAD detail drawings" },
-  { name: "Nancy De La Cruz", photo: "/images/team/nancy.jpg", role: "Sketches and designs" },
+  { name: "Jose P. Hernandez", photo: "/images/team/jose.jpg", role: "CAD designer, software engineer and 3D printing specialist. CAD detail drawings" },
+  { name: "Nancy De La Cruz", photo: "/images/team/nancy.jpg", role: "Prototype tester and managing editor. Sketches and designs" },
 ];
 
 export const teachers = "Lupita C. Vasquez and Claudia Cortez";
