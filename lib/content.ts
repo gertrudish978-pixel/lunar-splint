@@ -262,8 +262,16 @@ export const deliverables: { title: string; body: string; status: Status }[] = [
   },
 ];
 
+// From the NASA HUNCH PDR/CDR/FDR calendar (times in GMT-5).
+export const pdr = {
+  region: "South Texas",
+  location: "Mercedes, TX",
+  dates: "Oct 21–22, 2026",
+  start: "2026-10-21T08:15:00-05:00",
+};
+
 export const reviews = [
-  { name: "PDR", body: "Preliminary Design Review with a 40–50% prototype. This is our next milestone.", current: true },
+  { name: "PDR", body: "Preliminary Design Review with a 40–50% prototype, at the South Texas review in Mercedes on Oct 21–22, 2026. This is our next milestone.", current: true },
   { name: "CDR", body: "Critical Design Review with a 90% working prototype." },
   { name: "FDR", body: "Final Design Review with a 100% working prototype. By invitation, at NASA Johnson Space Center in Houston." },
 ];

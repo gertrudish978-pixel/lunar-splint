@@ -221,3 +221,5 @@ footer ol.plain{list-style:none;padding:0}
 .sketch .sk-call line{stroke:var(--muted);stroke-width:1}
 .stack{display:grid;gap:24px}.stack > *{min-width:0}
 .headshot{width:120px;height:120px;border-radius:50%;object-fit:cover;display:block;margin-bottom:12px;border:3px solid var(--peek-soft)}
+.countdown{display:block;margin-top:10px;font:600 .85rem/1.2 var(--font-mono);color:var(--peek);font-variant-numeric:tabular-nums}
+.countdown b{font:800 1.5rem/1 var(--font-display);color:var(--bg)}

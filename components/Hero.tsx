@@ -1,4 +1,5 @@
-import { heroStats } from "@/lib/content";
+import { heroStats, pdr } from "@/lib/content";
+import Countdown from "./Countdown";
 import { asset } from "@/lib/asset";
 
 export default function Hero() {
@@ -6,7 +7,7 @@ export default function Hero() {
     <header className="hero" id="top">
       <div className="wrap hero-grid">
         <div>
-          <p className="eyebrow">Team LunOva · NASA HUNCH Lunar Splint Design Challenge · 2026–27</p>
+          <p className="eyebrow">Team LunOva · NASA HUNCH · 2026–27</p>
           <h1>
             A splint printed <em>on the Moon.</em>
           </h1>
@@ -35,8 +36,11 @@ export default function Hero() {
         <div className="mission">
           <div className="next">
             <p className="eyebrow">Next milestone</p>
-            <strong>PDR</strong>
-            <small>Preliminary Design Review · 40–50% prototype · date set by our teachers</small>
+            <strong>PDR · {pdr.dates}</strong>
+            <small>
+              Preliminary Design Review · {pdr.region}, {pdr.location} · 40–50% prototype
+            </small>
+            <Countdown to={pdr.start} />
           </div>
           {heroStats.map((s) => (
             <div className="stat" key={s.value}>
