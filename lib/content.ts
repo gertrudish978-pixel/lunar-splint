@@ -234,7 +234,7 @@ export const prototypeSlides = [
   {
     src: "/images/testing.jpg",
     alt: "Load tests hanging weights from printed samples, and a sample whose layers separated.",
-    caption: "Load testing with hanging weights. Weight began to separate the layers",
+    caption: "Hanging-weight test up to 2,550 g. The weight began to separate the layers",
   },
   {
     src: "/images/cad-drawing.jpg",
@@ -245,7 +245,11 @@ export const prototypeSlides = [
 
 export const testResults = [
   { sample: "PETG, holes", result: "Very flexible, but started to break after constant bending", outcome: "Rejected" },
-  { sample: "TPU, holes", result: "Layers started to separate under hanging weight", outcome: "Rejected" },
+  {
+    sample: "TPU, holes",
+    result: "Hung weights in steps of 1,000 g, 2,000 g and 2,550 g (1,000 + 1,000 + 500 + 50). The layers started to separate",
+    outcome: "Rejected",
+  },
   { sample: "Triangle hole pattern", result: "Did not hold up", outcome: "Rejected" },
   { sample: "TPU, solid (no holes)", result: "Much less flexible, firm when bent, and moulds slightly to the finger", outcome: "Chosen" },
   { sample: "Straps at key points", result: "Increased support and kept the ankle from moving", outcome: "Chosen" },
