@@ -7,12 +7,12 @@ export default function Hero() {
     <header className="hero" id="top">
       <div className="wrap hero-grid">
         <div>
-          <p className="eyebrow">Team LunOva · NASA HUNCH · 2026–27</p>
+          <p className="eyebrow">Team Lunova · NASA HUNCH · 2026–27</p>
           <h1>
             A splint printed <em>on the Moon.</em>
           </h1>
           <p className="lede">
-            We are LunOva, a high school team designing a custom-fit, 3D-printable splint for an astronaut with a partial
+            We are Lunova, a high school team designing a custom-fit, 3D-printable splint for an astronaut with a partial
             Achilles tear on a lunar base, where the nearest hospital is days away.
           </p>
           <div className="ctas">

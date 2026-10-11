@@ -276,7 +276,7 @@ export const reviews = [
   { name: "FDR", body: "Final Design Review with a 100% working prototype. By invitation, at NASA Johnson Space Center in Houston." },
 ];
 
-export const teamName = "LunOva";
+export const teamName = "Lunova";
 
 export const team = [
   { name: "Gertrudis Hernandez", photo: "/images/team/gertrudis.jpg", role: "Student engineer" },
