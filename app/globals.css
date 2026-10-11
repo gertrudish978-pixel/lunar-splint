@@ -255,18 +255,19 @@ footer ol.plain{list-style:none;padding:0}
 .timeline li.current{font-weight:600}
 .timeline b{font-family:var(--font-mono);font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
 @media (max-width:520px){.timeline li{grid-template-columns:1fr;gap:2px}}
-/* Flip cards: both faces share one grid cell so each card is as tall as its longer face. */
-.narrow{max-width:760px}
-.flips{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;align-items:stretch}
-.flip{perspective:1600px;display:grid}
-.flip-inner{display:grid;width:100%;cursor:pointer;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,.7,.2,1);transform-origin:center}
+/* Flip cards: horizontal strips stacked in a column. The face showing stays in flow, so a card is as tall as what it shows. */
+.flips{display:grid;gap:14px}
+.flip{perspective:1600px}
+.flip-inner{position:relative;display:grid;width:100%;cursor:pointer;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,.7,.2,1)}
 .flip.flipped .flip-inner{transform:rotateY(-180deg)}
 .flip-inner:focus-visible{outline:2px solid var(--peek);outline-offset:4px;border-radius:4px}
-.flip-face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--peek);border-radius:4px;padding:22px 22px;display:flex;flex-direction:column;gap:10px;box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
-.flip-front{justify-content:center;align-items:flex-start}
-.flip-front b{font:800 4.4rem/1 var(--font-display);color:var(--peek)}
-.flip-front strong{font:800 1.45rem/1.1 var(--font-display);text-transform:uppercase;color:var(--ink)}
-.flip-back{transform:rotateY(180deg)}
+.flip-face{backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--peek);border-radius:4px;padding:16px 20px;box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.flip-back,.flip.flipped .flip-front{position:absolute;inset:0;overflow:hidden}
+.flip.flipped .flip-back{position:relative;inset:auto;overflow:visible}
+.flip-front{display:flex;align-items:center;gap:18px}
+.flip-front b{font:800 2.6rem/1 var(--font-display);color:var(--peek);min-width:4.2ch;white-space:nowrap}
+.flip-front strong{font:800 1.15rem/1.15 var(--font-display);text-transform:uppercase;color:var(--ink);flex:1}
+.flip-back{transform:rotateY(180deg);display:flex;flex-direction:column;gap:10px}
 .flip-back ol{margin:2px 0 0;padding:0;list-style:none;counter-reset:req;display:grid;gap:10px}
 .flip-back li{counter-increment:req;display:grid;align-content:start;grid-template-columns:26px 1fr;column-gap:8px;color:var(--ink);font-size:.9rem;line-height:1.35}
 .flip-back li::before{content:counter(req);grid-row:span 2;font:800 1.2rem/1.1 var(--font-display);color:var(--peek)}
@@ -274,8 +275,6 @@ footer ol.plain{list-style:none;padding:0}
 .flip-back li span{color:var(--muted);font-size:.84rem}
 .flip-back li em{font:600 .66rem/1 var(--font-mono);font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--peek);border:1px solid currentColor;border-radius:2px;padding:3px 5px;margin-left:4px;vertical-align:2px;white-space:nowrap}
 .flip-back li.pick strong{color:var(--peek)}
-.flip-hint{font:600 .7rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:auto;padding-top:6px}
-@media (max-width:900px){.flips{grid-template-columns:1fr}}
+.flip-hint{font:600 .7rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+@media (max-width:520px){.flip-front{flex-wrap:wrap;gap:8px 14px}.flip-front .flip-hint{flex-basis:100%}}
 @media (prefers-reduced-motion:reduce){.flip-inner{transition:none}}
-.flip-front b{margin-top:auto}
-.flips.solo{margin-top:20px}
