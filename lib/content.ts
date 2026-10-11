@@ -37,6 +37,15 @@ export const rubric: FlipItem[] = [
 
 export const splintMass = { value: "80–150 g", label: "filament in a typical ankle splint" };
 
+// Mass budget guide, section 12 of the student brief. A typical hand splint is ~40–80 g.
+export const massSteps: FlipItem[] = [
+  { title: "Estimate volume", body: "Splint volume in cm³ from the CAD model or rough geometry." },
+  { title: "Apply infill", body: "Multiply by the infill fraction (25% infill → × 0.25), then add the shell volume." },
+  { title: "Multiply by density", body: "PLA 1.24, ABS 1.04, TPU ~1.2, PEEK 1.32 g/cm³." },
+  { title: "Find launch cost", body: "Convert to kg and multiply by $1,000,000. Every gram costs about $1,000." },
+  { title: "Justify the mass", body: "Compare against launching a full set of fixed-size splints, which weighs far more." },
+];
+
 // The six design requirements, from section 4 of the student brief.
 export const requirements: FlipItem[] = [
   { title: "Adequate immobilization", body: "Immobilizes the chosen injury in 1/6 gravity, accounting for the altered force mechanics." },

@@ -275,8 +275,7 @@ footer ol.plain{list-style:none;padding:0}
 .flip-back li em{font:600 .66rem/1 var(--font-mono);font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--peek);border:1px solid currentColor;border-radius:2px;padding:3px 5px;margin-left:4px;vertical-align:2px;white-space:nowrap}
 .flip-back li.pick strong{color:var(--peek)}
 .flip-hint{font:600 .7rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:auto;padding-top:6px}
-.figs.single{grid-template-columns:1fr;margin-top:20px;max-width:360px}
 @media (max-width:900px){.flips{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.flip-inner{transition:none}}
-.figs.single div{border:0}
 .flip-front b{margin-top:auto}
+.flips.solo{margin-top:20px}
