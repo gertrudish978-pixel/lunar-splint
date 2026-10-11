@@ -8,7 +8,7 @@ const fmt = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 0 
 // Follows the challenge brief's mass budget method:
 // mass = (volume × infill + shell volume) × density; launch cost = mass × $1,000/g.
 export default function MassCalculator() {
-  const [volume, setVolume] = useState(300);
+  const [volume, setVolume] = useState(240);
   const [infill, setInfill] = useState(25);
   const [shell, setShell] = useState(30);
   const [density, setDensity] = useState(materials[0].density);
@@ -56,7 +56,7 @@ export default function MassCalculator() {
           <span>vs. 80–150 g typical ankle splint</span>
         </div>
       </div>
-      <p className="note">Mass = (volume × infill + shell) × density. Example values only.</p>
+      <p className="note">Mass = (volume × infill + shell) × density. Defaults are our shell estimate.</p>
     </form>
   );
 }

@@ -53,37 +53,58 @@ export const spec: { label: string; value: string; status?: Status }[] = [
   { label: "Fit", value: "Custom, generated from a scan of the patient's limb", status: "ok" },
   {
     label: "Lunar innovation",
-    value: "Choosing between a swelling-adaptive lattice and a single-piece ratchet closure",
-    status: "wip",
+    value: "Both: a swelling-adaptive lattice liner and a single-piece ratchet closure",
+    status: "ok",
   },
-  { label: "Prototype material", value: "To be chosen from PLA, ABS or TPU", status: "wip" },
-  { label: "Flight material", value: "To be argued from PEEK, TPU or CF-PEEK", status: "todo" },
-  { label: "Mass & print time", value: "Estimate due with the CAD model", status: "todo" },
-  { label: "CAD", value: "Being modelled by a team member's brother", status: "todo" },
+  { label: "Position", value: "Foot held pointed down (about 20°) to unload the healing tendon" },
+  {
+    label: "Prototype material",
+    value: "PLA for the rigid shell, TPU (95A) for the lattice liner and ratchet strap",
+    status: "ok",
+  },
+  {
+    label: "Flight material",
+    value: "PEEK for the shell, medical-grade TPU for the liner and strap",
+    status: "ok",
+  },
+  { label: "Mass & print time", value: "≈ 144 g and ≈ 6.5 h (planning estimate, to confirm from CAD)", status: "wip" },
+  { label: "CAD", value: "Being modelled by a team member's brother", status: "wip" },
 ];
 
 export const innovations = [
   {
-    tag: "Exploring",
+    tag: "Chosen",
     name: "Swelling-adaptive lattice",
-    body: "Variable-density gyroid or honeycomb that gives as the ankle swells, so the crew doesn't need to keep re-adjusting it. Inspired by the radiotherapy mesh mask and lattice boot.",
+    body: "A TPU gyroid liner that is softer over the swollen back of the ankle and firmer at the edges. It compresses as swelling rises in the first weeks, so the crew doesn't need to keep re-adjusting it. Inspired by the radiotherapy mesh mask and lattice boot.",
   },
   {
-    tag: "Exploring",
+    tag: "Chosen",
     name: "Single-piece ratchet closure",
-    body: "A printed friction lock with no loose parts, screws or Velcro, usable with one hand. Inspired by hose clamps and a reusable zip tie.",
+    body: "Printed toothed straps that click into a pawl on the shell, with no loose parts, screws or Velcro. The astronaut can tighten or release it with one hand to take the splint off for hygiene. Inspired by hose clamps and a reusable zip tie.",
   },
   {
-    tag: "Option",
+    tag: "Built in",
+    name: "Openings for skin and hygiene",
+    body: "The lattice and the open sides of the shell leave skin visible and ventilated, so it can be checked and cleaned during weeks of wear.",
+  },
+  {
+    tag: "Future",
     name: "Rehab-progressive locking",
-    body: "Locked for full immobilization early on, then pins come out for controlled motion, so one splint covers the whole recovery.",
-  },
-  {
-    tag: "Option",
-    name: "Integrated hygiene openings",
-    body: "Fenestrations and ventilation channels for cleaning, skin checks and moisture control during weeks of wear.",
+    body: "A later version could add removable heel wedges to bring the foot back to neutral over the weeks, so one splint covers the whole recovery.",
   },
 ];
+
+// Planning estimate using the challenge brief's mass method, before the CAD model exists.
+export const massEstimate = {
+  parts: [
+    { part: "Rigid shell (posterior strut + footplate)", material: "PEEK", volume: 240, infill: 25, shell: 30, density: 1.32 },
+    { part: "Lattice liner", material: "TPU", volume: 60, infill: 15, shell: 0, density: 1.2 },
+    { part: "Ratchet straps (×3)", material: "TPU", volume: 12, infill: 100, shell: 0, density: 1.2 },
+  ],
+  printRate: 22, // g per hour, 0.6 mm nozzle, from typical FDM throughput
+  inventoryNote:
+    "Launching a fixed-size walking boot in six sizes for left and right feet would mean about 12 boots at roughly 1 kg each, or about $12M of launch mass, and none would be shaped to the patient.",
+};
 
 // Densities from the challenge brief's mass budget guide (g/cm³).
 export const materials = [
@@ -217,22 +238,22 @@ export const deliverables: { title: string; body: string; status: Status }[] = [
   {
     title: "Biomechanics rationale",
     body: "1–2 pages on how gravity, bone loss and long-term wear change the design. Our purpose statement is the starting point.",
-    status: "todo",
+    status: "wip",
   },
   {
     title: "Annotated concept sketch",
-    body: "Every feature labeled with its reason, with the innovation clearly marked.",
-    status: "todo",
+    body: "Every feature labeled with its reason, with the innovation clearly marked. A first version is on this page.",
+    status: "wip",
   },
   {
     title: "CAD model with cross-section",
     body: "Geometry, wall thickness, infill zones, closure and material.",
-    status: "todo",
+    status: "wip",
   },
   {
     title: "Mass and print-time estimate",
-    body: "Grams of filament, launch cost and print time, justified against a fixed-size inventory.",
-    status: "todo",
+    body: "Grams of filament, launch cost and print time, justified against a fixed-size inventory. A planning estimate is on this page.",
+    status: "wip",
   },
   {
     title: "Five-minute design review",

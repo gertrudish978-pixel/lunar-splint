@@ -208,3 +208,15 @@ footer ol a{word-break:break-word}
 .spaced{margin-top:60px}
 .head.tight{margin-bottom:22px}
 footer ol.plain{list-style:none;padding:0}
+.estimate{display:grid;gap:16px;min-width:0}
+.estimate td.num,.estimate th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.estimate tr.total td{font-weight:700}
+.estimate .note{font-size:.85rem;color:var(--muted)}
+.estimate .out{background:var(--surface)}
+.sketch{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px;min-width:0}
+.sketch-scroll{overflow-x:auto}
+.sketch svg{display:block;width:100%;min-width:560px;height:auto}
+.sketch .sk-h{font:700 14px var(--font-body);fill:var(--ink)}
+.sketch .sk-t{font:400 12.5px var(--font-body);fill:var(--muted)}
+.sketch .sk-call line{stroke:var(--muted);stroke-width:1}
+.stack{display:grid;gap:24px}.stack > *{min-width:0}

@@ -1,5 +1,7 @@
 import { innovations, spec } from "@/lib/content";
+import ConceptSketch from "./ConceptSketch";
 import MassCalculator from "./MassCalculator";
+import MassEstimate from "./MassEstimate";
 import Pill from "./Pill";
 
 export default function Design() {
@@ -34,10 +36,10 @@ export default function Design() {
             </dl>
           </div>
           <div>
-            <h3>Innovations we&apos;re exploring</h3>
+            <h3>Our lunar innovations</h3>
             <p className="sub">
-              The brief requires at least one lunar-specific innovation built into the geometry. These are the ones our
-              research points to so far.
+              The brief requires at least one lunar-specific innovation built into the geometry. We combine two, which the
+              brief encourages, and both come straight from our notebook research.
             </p>
             <div className="innov">
               <ul>
@@ -55,12 +57,37 @@ export default function Design() {
 
         <div className="two spaced">
           <div className="prose">
-            <p className="eyebrow">Mass budget</p>
+            <p className="eyebrow">Concept sketch</p>
+            <h3>How the pieces fit together</h3>
+            <p>
+              A rigid shell runs down the back of the calf, behind the heel and under the foot, and holds the foot
+              pointed down so the healing tendon stays slack. The lattice liner sits between shell and skin, and three
+              ratchet straps close it. Our CAD model will follow this layout.
+            </p>
+          </div>
+          <ConceptSketch />
+        </div>
+
+        <div className="stack spaced">
+          <div className="prose">
+            <p className="eyebrow">Mass &amp; print time</p>
+            <h3>About 144 grams, printed in under 7 hours</h3>
+            <p>
+              We estimated each part with the brief&apos;s mass method. The full splint lands inside the typical
+              80–150 g range for an ankle splint, and prints well inside the 4–8 hour window.
+            </p>
+          </div>
+          <MassEstimate />
+        </div>
+
+        <div className="two spaced">
+          <div className="prose">
+            <p className="eyebrow">Try it yourself</p>
             <h3>Every gram costs $1,000</h3>
             <p>
               The brief asks every team to estimate filament mass and its launch cost, then argue why printing one
               custom splint beats launching a full set of fixed sizes. This calculator follows the brief&apos;s
-              five-step method. The defaults are example numbers, not our design.
+              five-step method. It starts with our shell numbers; change them to see how mass and cost move.
             </p>
           </div>
           <MassCalculator />
