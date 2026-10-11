@@ -268,10 +268,12 @@ export const reviews = [
   { name: "FDR", body: "Final Design Review with a 100% working prototype. By invitation, at NASA Johnson Space Center in Houston." },
 ];
 
+export const teamName = "LunOva";
+
 export const team = [
-  { name: "Nancy De La Cruz", initials: "ND", role: "Student engineer" },
-  { name: "Gertrudis Hernandez", initials: "GH", role: "Student engineer" },
-  { name: "Jose Hernandez", initials: "JH", role: "Student engineer" },
+  { name: "Gertrudis Hernandez", photo: "/images/team/gertrudis.jpg", role: "Student engineer" },
+  { name: "Jose Hernandez", photo: "/images/team/jose.jpg", role: "Student engineer" },
+  { name: "Nancy De La Cruz", photo: "/images/team/nancy.jpg", role: "Student engineer" },
 ];
 
 export const teachers = "Lupita C. Vasquez and Claudia Cortez";

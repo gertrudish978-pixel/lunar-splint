@@ -19,7 +19,7 @@ export default function Nav() {
             <circle cx="14" cy="20" r="2" fill="currentColor" />
             <path d="M4 22 Q15 16 26 22" fill="none" stroke="var(--peek)" strokeWidth="2.4" />
           </svg>
-          Lunar Splint
+          LunOva
         </a>
         <ul>
           {links.map(([id, label]) => (

@@ -7,7 +7,7 @@ const body = Source_Sans_3({ subsets: ["latin"], weight: ["400", "600", "700"], 
 const mono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "600"], variable: "--nf-mono" });
 
 export const metadata: Metadata = {
-  title: "Lunar Splint Project",
+  title: "LunOva · Lunar Splint Project",
   description:
     "A high school NASA HUNCH team designing a 3D-printable splint for an Achilles partial tear on a lunar base.",
 };
