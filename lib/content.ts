@@ -386,7 +386,8 @@ export const digitalRecords = [
   { label: "Engineering notebook (D.A.A.N.)", href: "https://docs.google.com/document/d/1hKhcNnmtno6e4WYorjXT1Oe3MqVzv_eXaMi5e8vBHBI/edit?usp=sharing" },
   { label: "Problem statement", href: "https://docs.google.com/document/d/1np4IYU2kg3Toc2JTO7HXkjL3HSx_v_YMV_1JqnkxwXY/edit?usp=sharing" },
   { label: "Assessment survey results", href: "https://docs.google.com/document/d/1bgVcsqcsD2ueFd9Aoes3MxxKUOwubQQHS9IAxuHU4xI/edit?usp=sharing" },
-  { label: "Presentation deck (Canva)", href: "https://canva.link/won8fe9ftw6rgqg" },
+  { label: "Presentation deck (Canva)", href: "https://canva.link/qrdwet2jf7sb0ju" },
+  { label: "Brochure (PDF)", href: "https://gertrudish978-pixel.github.io/lunar-splint/docs/OrthoPrint-brochure.pdf" },
 ];
 
 // Problem statement, from our presentation.
@@ -457,6 +458,6 @@ export const pdrChecklist: { item: string; href?: string; status: Status; note?:
   { item: "Patent search (optional)", status: "todo" },
   { item: "Next steps and schedule", href: "/roadmap/", status: "done" },
   { item: "Prototype video and presentation video", status: "todo" },
-  { item: "Brochure with QR code", status: "todo", note: "The QR code above is ready to use" },
+  { item: "Brochure with QR code", href: "https://gertrudish978-pixel.github.io/lunar-splint/docs/OrthoPrint-brochure.pdf", status: "done" },
   { item: "Materials list and budget", status: "todo" },
 ];
