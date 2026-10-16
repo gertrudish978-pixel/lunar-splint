@@ -8,11 +8,12 @@ export default function PageLinks() {
       <div className="wrap">
         <div className="head">
           <p className="eyebrow">Explore the project</p>
-          <h2>Six pages, one splint</h2>
+          <h2>Seven pages, one splint</h2>
         </div>
         <div className="cards">
-          {pages.map((p) => (
+          {pages.map((p, i) => (
             <Link key={p.slug} href={`/${p.slug}/`} className="card">
+              <span className="card-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
               <h3>{p.label}</h3>
               <p>{p.blurb}</p>
               <span className="go" aria-hidden="true">→</span>

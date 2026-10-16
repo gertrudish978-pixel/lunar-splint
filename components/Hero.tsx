@@ -7,8 +7,10 @@ export default function Hero() {
   return (
     <header className="hero" id="top">
       <div className="wrap hero-grid">
-        <div>
-          <p className="eyebrow">Team Lunova · NASA HUNCH · 2026–27</p>
+        <div className="hero-copy">
+          <p className="hero-badge">
+            <span>NASA HUNCH 2026–27</span> Lunar Splint Design Challenge
+          </p>
           <h1>
             A splint printed <em>on the Moon.</em>
           </h1>
@@ -18,10 +20,14 @@ export default function Hero() {
           </p>
           <div className="ctas">
             <Link className="btn primary" href="/design/">See the design</Link>
-            <Link className="btn" href="/survey/">Read our survey</Link>
+            <Link className="btn ghost" href="/survey/">Read our survey</Link>
           </div>
         </div>
-        <figure>
+        <figure className="window">
+          <div className="window-bar" aria-hidden="true">
+            <i /><i /><i />
+            <span>orthoprint · concept</span>
+          </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={asset("/images/concept-print.jpg")}

@@ -1,4 +1,5 @@
-import { digitalRecords } from "@/lib/content";
+import { digitalRecords, school } from "@/lib/content";
+import { asset } from "@/lib/asset";
 
 const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 
@@ -6,6 +7,13 @@ export default function Footer() {
   return (
     <footer>
       <div className="wrap">
+        <div className="foot-brand">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={asset("/images/school-logo.png")} alt={`${school} logo`} width={72} height={72} />
+          <strong>Team Lunova</strong>
+          <span>{school}</span>
+          <span>NASA HUNCH 2026–27 · Lunar Splint Design Challenge</span>
+        </div>
         <div>
           <h3>References</h3>
           <ol>

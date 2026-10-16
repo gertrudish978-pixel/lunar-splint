@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Big_Shoulders, JetBrains_Mono, Source_Sans_3 } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import "./globals.css";
 
-const display = Big_Shoulders({ subsets: ["latin"], weight: ["600", "800"], variable: "--nf-display" });
-const body = Source_Sans_3({ subsets: ["latin"], weight: ["400", "600", "700"], style: ["normal", "italic"], variable: "--nf-body" });
+const display = Inter({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--nf-display" });
+const body = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], variable: "--nf-body" });
 const mono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "600"], variable: "--nf-mono" });
 
 export const metadata: Metadata = {
