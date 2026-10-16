@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { digitalRecords, school, team, teachers, timeline } from "@/lib/content";
-import { asset } from "@/lib/asset";
+import { digitalRecords, timeline } from "@/lib/content";
 
 const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 
-// Home page sections below the page cards: where we are, the team, and our records.
+// Home page sections below the page cards: where we are and our records.
 export default function HomeExtras() {
   const now = timeline.findIndex((t) => t.current);
   const upcoming = timeline.slice(Math.max(0, now - 1), now + 3);
@@ -29,33 +28,6 @@ export default function HomeExtras() {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <section>
-        <div className="wrap">
-          <div className="head center">
-            <p className="eyebrow">Meet the team</p>
-            <h2>Three students, one splint</h2>
-            <p>
-              {school} · Teachers: {teachers}
-            </p>
-          </div>
-          <div className="faces">
-            {team.map((m) => (
-              <figure key={m.name}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={asset(m.photo)}  alt={`Headshot of ${m.name}`} />
-                <figcaption>
-                  <strong>{m.name}</strong>
-                  <span>{m.role}</span>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-          <p className="center-cta">
-            <Link className="btn" href="/team/">More about the team</Link>
-          </p>
         </div>
       </section>
 
