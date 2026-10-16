@@ -20,7 +20,7 @@ export default function Hero() {
           </p>
           <div className="ctas">
             <Link className="btn primary" href="/design/">See the design</Link>
-            <Link className="btn ghost" href="/survey/">Read our survey</Link>
+            <Link className="btn ghost" href="/survey/">Read our needs assessment survey</Link>
           </div>
         </div>
         <figure className="window">

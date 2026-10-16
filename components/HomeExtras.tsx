@@ -36,7 +36,7 @@ export default function HomeExtras() {
           <div className="head center">
             <p className="eyebrow">Digital records</p>
             <h2>Everything behind the design</h2>
-            <p>Our notebook, problem statement, survey results, slides and brochure, all in one place.</p>
+            <p>Our notebook, problem statement, needs assessment survey results, slides and brochure, all in one place.</p>
           </div>
           <ul className="record-buttons">
             {digitalRecords.map((r) => (

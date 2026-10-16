@@ -5,8 +5,8 @@ export default function Survey() {
     <section id="survey">
       <div className="wrap">
         <div className="head">
-          <p className="eyebrow">Assessment survey · {surveyTotal} responses · Aug 26–27, 2026</p>
-          <h2>What {surveyTotal} classmates told us</h2>
+          <p className="eyebrow">{surveyTotal} responses · Aug 26–27, 2026</p>
+          <h2>Needs Assessment Survey</h2>
           <p>
             We surveyed students aged 14–19 at our school to learn how people think about splints, sizing and
             3D-printed medical devices. They aren&apos;t astronauts, but their answers shaped what we prioritize.

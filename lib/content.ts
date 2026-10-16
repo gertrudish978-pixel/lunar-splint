@@ -377,7 +377,7 @@ export const siteUrl = "https://gertrudish978-pixel.github.io/lunar-splint/";
 export const digitalRecords = [
   { label: "Engineering notebook (D.A.A.N.)", href: "https://docs.google.com/document/d/1hKhcNnmtno6e4WYorjXT1Oe3MqVzv_eXaMi5e8vBHBI/edit?usp=sharing" },
   { label: "Problem statement", href: "https://docs.google.com/document/d/1np4IYU2kg3Toc2JTO7HXkjL3HSx_v_YMV_1JqnkxwXY/edit?usp=sharing" },
-  { label: "Assessment survey results", href: "https://docs.google.com/document/d/1bgVcsqcsD2ueFd9Aoes3MxxKUOwubQQHS9IAxuHU4xI/edit?usp=sharing" },
+  { label: "Needs Assessment Survey results", href: "https://docs.google.com/document/d/1bgVcsqcsD2ueFd9Aoes3MxxKUOwubQQHS9IAxuHU4xI/edit?usp=sharing" },
   { label: "Presentation deck (Canva)", href: "https://canva.link/qrdwet2jf7sb0ju" },
   { label: "Brochure (PDF)", href: "https://gertrudish978-pixel.github.io/lunar-splint/docs/OrthoPrint-brochure.pdf" },
   { label: "Presentation board (PDF)", href: "https://gertrudish978-pixel.github.io/lunar-splint/docs/OrthoPrint-display-board.pdf" },
@@ -447,7 +447,7 @@ export const pdrChecklist: { item: string; href?: string; status: Status; note?:
   { item: "Drawings with measurements", href: "/design/#testing", status: "done" },
   { item: "Materials and why we chose them", href: "/design/#materials", status: "wip", note: "Reason for CF-PEEK still needed" },
   { item: "Testing data", href: "/design/#testing", status: "wip", note: "Preliminary tests" },
-  { item: "Market survey (optional)", href: "/survey/", status: "done" },
+  { item: "Needs Assessment Survey (market survey, optional)", href: "/survey/", status: "done" },
   { item: "Patent search (optional)", status: "todo" },
   { item: "Next steps and schedule", href: "/roadmap/", status: "done" },
   { item: "Prototype video and presentation video", status: "todo" },
