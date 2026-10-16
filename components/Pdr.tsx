@@ -1,4 +1,4 @@
-import { digitalRecords, nasaProject, nasaRequester, pdr, pdrChecklist, prototypeName, school, siteUrl, teachers, teamName, teamNumber } from "@/lib/content";
+import { digitalRecords, nasaProject, nasaRequester, pdr, pdrChecklist, prototypeName, school, siteUrl, teachers, teamName } from "@/lib/content";
 import { asset } from "@/lib/asset";
 import Link from "next/link";
 import Pill from "./Pill";
@@ -28,8 +28,6 @@ export default function Pdr() {
               <dd>{school}</dd>
               <dt>Teachers</dt>
               <dd>{teachers}</dd>
-              <dt>Team #</dt>
-              <dd>{teamNumber ?? <Pill status="todo" label="Not given yet" />}</dd>
               <dt>NASA project</dt>
               <dd>
                 {nasaProject}, from the {nasaRequester}

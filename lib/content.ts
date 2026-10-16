@@ -431,7 +431,7 @@ export const materialsUsed = [
 
 // What the PDR (Design Review Expectations) and the Weeks 5 & 6 objectives ask the website to show.
 export const pdrChecklist: { item: string; href?: string; status: Status; note?: string }[] = [
-  { item: "Presentation header", href: "#header", status: "wip", note: "Team number still needed" },
+  { item: "Presentation header", href: "#header", status: "done" },
   { item: "Team", href: "/team/", status: "done" },
   { item: "Presentation board (tri-fold)", href: "#board", status: "wip", note: "Board design is below; add a photo once it is printed" },
   { item: "Engineering notebook (D.A.A.N.)", href: digitalRecords[0].href, status: "done" },
