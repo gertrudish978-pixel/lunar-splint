@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
         <div className="fine">
           <span>Team Lunova · NASA HUNCH 2026–27 student project</span>
-          <span>A student design project. Not endorsed by NASA. Not a medical device.</span>
+          <span>A student design project. Not a medical device.</span>
         </div>
       </div>
     </footer>
