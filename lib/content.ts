@@ -27,14 +27,6 @@ export const scenarios: FlipItem[] = [
   { title: "Achilles partial tear", body: "Back of the ankle. Moderate risk from repetitive movement in the habitat. Advanced." },
 ];
 
-export const rubric: FlipItem[] = [
-  { title: "Biomechanics accuracy", body: "Addresses 1/6 g, bone density loss, the habitat and long-term wear for the chosen injury.", badge: "25 pts" },
-  { title: "Novelty & justification", body: "The innovation is well reasoned, clearly described and built into the design.", badge: "25 pts" },
-  { title: "Design completeness", body: "Geometry, wall thickness, closure, infill, material and fit are all covered.", badge: "20 pts" },
-  { title: "Mass & printability", body: "Realistic filament mass, print time considered, material justified for the habitat.", badge: "15 pts" },
-  { title: "Presentation & defense", body: "Clear, confident answers, presented as if to the crew medical officer.", badge: "15 pts" },
-];
-
 export const splintMass = { value: "80–150 g", label: "filament in a typical ankle splint" };
 
 // Mass budget guide, section 12 of the student brief. A typical hand splint is ~40–80 g.

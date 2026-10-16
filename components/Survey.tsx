@@ -39,7 +39,7 @@ export default function Survey() {
         <div className="concerns">
           <div className="head tight">
             <h3>Their concerns, and how we plan to answer them</h3>
-            <p>Respondents&apos; open-ended questions line up closely with what the judges score.</p>
+            <p>The open-ended questions people asked, and how our design answers each one.</p>
           </div>
           <div className="ctable">
             <table>

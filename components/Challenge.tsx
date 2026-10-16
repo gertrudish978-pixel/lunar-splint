@@ -1,4 +1,4 @@
-import { constraints, massSteps, problemStatement, problemsToAvoid, requirements, rubric, scenarios, splintMass, teamNeeds } from "@/lib/content";
+import { constraints, massSteps, problemStatement, problemsToAvoid, requirements, scenarios, splintMass, teamNeeds } from "@/lib/content";
 import FlipCard from "./FlipCard";
 
 export default function Challenge() {
@@ -25,7 +25,6 @@ export default function Challenge() {
             <div className="flips">
               <FlipCard value="5" label="injury scenarios to choose from" heading="The 5 injury scenarios" items={scenarios} />
               <FlipCard value="6" label="design requirements to meet" heading="The 6 design requirements" items={requirements} />
-              <FlipCard value="100" label="point judging rubric" heading="How the 100 points split" items={rubric} />
               <FlipCard value={splintMass.value} label={splintMass.label} heading="How to calculate the mass budget" items={massSteps} />
             </div>
             <p className="source">Figures from the official Lunar Splint Design Challenge student brief (habitat-use-only edition).</p>
