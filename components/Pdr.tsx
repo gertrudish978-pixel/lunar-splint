@@ -60,6 +60,16 @@ export default function Pdr() {
             </figure>
           </div>
         </div>
+        <figure className="board-preview spaced" id="board">
+          <a href={asset("/docs/OrthoPrint-display-board.pdf")} {...ext}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={asset("/images/display-board.jpg")} alt="Our tri-fold presentation board design" />
+          </a>
+          <figcaption>
+            Presentation board, 48 × 36 in tri-fold.{" "}
+            <a href={asset("/docs/OrthoPrint-display-board.pdf")} {...ext}>Open the full-size PDF</a>
+          </figcaption>
+        </figure>
         <div className="checklist spaced">
           <ol>
             {pdrChecklist.map((c) => {

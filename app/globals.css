@@ -444,3 +444,6 @@ footer a:hover{color:#f08a52}
 @container calc (min-width:640px){.out{grid-template-columns:repeat(3,1fr)}.out div:last-child{grid-column:auto}}
 @container calc (max-width:380px){.out{grid-template-columns:1fr}}
 .calc .row label{grid-template-rows:1fr auto;align-items:end}
+
+.board-preview img{width:100%;height:auto;border:1px solid var(--line,#ddd);border-radius:var(--r,16px);display:block}
+.board-preview figcaption{margin-top:.6rem;font-size:.95rem;color:var(--muted,#555)}
