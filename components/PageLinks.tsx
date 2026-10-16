@@ -8,7 +8,7 @@ export default function PageLinks() {
       <div className="wrap">
         <div className="head">
           <p className="eyebrow">Explore the project</p>
-          <h2>Seven pages, one splint</h2>
+          <h2>Six pages, one splint</h2>
         </div>
         <div className="cards">
           {pages.map((p, i) => (

@@ -26,7 +26,6 @@ export default function Nav() {
                 <Link
                   href={`/${p.slug}/`}
                   aria-current={active ? "page" : undefined}
-                  className={p.slug === "pdr" ? "nav-cta" : undefined}
                 >
                   {p.label}
                 </Link>
