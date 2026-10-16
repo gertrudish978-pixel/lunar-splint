@@ -433,3 +433,14 @@ footer a:hover{color:#f08a52}
 .subpage{background:radial-gradient(1100px 320px at 50% -120px,var(--peek-soft),transparent 70%)}
 .mission > div{align-content:start}
 @media (max-width:520px){.hero-badge{border-radius:14px;padding:6px 12px 6px 6px}}
+/* mass calculator: result boxes grow and the numbers shrink to fit as they get larger */
+.out{grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px;border:0;border-radius:0}
+.out div{container-type:inline-size;border:1px solid var(--line)!important;border-radius:12px;background:var(--bg)}
+.out b{font-size:min(2rem,calc(100cqi / (var(--len,8) * .62)));line-height:1.1;white-space:nowrap}
+.calc input{font-variant-numeric:tabular-nums}
+.calc{container-type:inline-size;container-name:calc}
+.out{grid-template-columns:1fr 1fr}
+.out div:last-child{grid-column:1/-1}
+@container calc (min-width:640px){.out{grid-template-columns:repeat(3,1fr)}.out div:last-child{grid-column:auto}}
+@container calc (max-width:380px){.out{grid-template-columns:1fr}}
+.calc .row label{grid-template-rows:1fr auto;align-items:end}

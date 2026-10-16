@@ -4,6 +4,8 @@ import { useState } from "react";
 import { materials } from "@/lib/content";
 
 const fmt = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 0 });
+// Tells the CSS how many characters a result has, so long numbers shrink to fit their box.
+const fit = (text: string) => ({ "--len": text.length }) as React.CSSProperties;
 
 // Follows the challenge brief's mass budget method:
 // mass = (volume × infill + shell volume) × density; launch cost = mass × $1,000/g.
@@ -44,15 +46,15 @@ export default function MassCalculator() {
       </label>
       <div className="out" aria-live="polite">
         <div>
-          <b>{fmt(grams)} g</b>
+          <b style={fit(`${fmt(grams)} g`)}>{fmt(grams)} g</b>
           <span>filament mass</span>
         </div>
         <div>
-          <b>${fmt(grams * 1000)}</b>
+          <b style={fit(`$${fmt(grams * 1000)}`)}>${fmt(grams * 1000)}</b>
           <span>launch cost at $1M/kg</span>
         </div>
         <div>
-          <b>{band}</b>
+          <b style={fit(band)}>{band}</b>
           <span>vs. 80–150 g typical ankle splint</span>
         </div>
       </div>
