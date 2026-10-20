@@ -12,7 +12,7 @@ export default function Nav() {
       <div className="wrap">
         <Link className="brand" href="/">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="brand-logo" src={asset("/images/school-logo.png")} alt="" width={36} height={36} />
+          <img className="brand-logo" src={asset("/images/lunova-mark.svg")} alt="Lunova logo" width={36} height={36} />
           <span>
             Lunova
             <small>NASA HUNCH 2026–27</small>

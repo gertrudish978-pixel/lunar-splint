@@ -9,7 +9,12 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={asset("/images/school-logo.png")} alt={`${school} logo`} width={72} height={72} />
+          <div className="foot-logos">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="team-logo" src={asset("/images/lunova-logo.svg")} alt="Lunova OrthoPrint logo" width={140} height={110} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={asset("/images/school-logo.png")} alt={`${school} logo`} width={72} height={72} />
+          </div>
           <strong>Team Lunova</strong>
           <span>{school}</span>
           <span>NASA HUNCH 2026–27 · Lunar Splint Design Challenge</span>

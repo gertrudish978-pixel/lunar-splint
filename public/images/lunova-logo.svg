@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 440"><style>text{font-family:Inter,Arial,Helvetica,sans-serif}</style><rect width="560" height="440" rx="28" fill="#fff"/>
+<g transform="translate(0,-6)">
+<path d="M262 30 h44 v26 l-10 20 h-24 l-10 -20z" fill="#14325c"/><rect x="276" y="76" width="16" height="14" fill="#14325c"/><path d="M284 90 v10" stroke="#ff7a1a" stroke-width="6"/>
+<path d="M232 120 V240 Q232 270 262 270 H352 Q378 270 378 248 Q378 232 360 228 L300 214 V120" fill="none" stroke="#ff7a1a" stroke-width="12" stroke-linejoin="round" stroke-dasharray="22 8"/>
+<path d="M232 120 h68" stroke="#ff7a1a" stroke-width="12"/>
+<circle cx="284" cy="108" r="7" fill="#ff7a1a"/></g>
+<text x="280" y="352" text-anchor="middle" font-family="Inter, Arial Black, Arial" font-weight="900" font-size="72" fill="#14325c" letter-spacing="8">LUNOVA</text>
+<text x="280" y="392" text-anchor="middle" font-family="Inter, Arial" font-weight="700" font-size="20" fill="#ff7a1a" letter-spacing="9">ORTHOPRINT</text></svg>
