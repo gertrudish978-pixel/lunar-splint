@@ -11,7 +11,7 @@ export default function Footer() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <div className="foot-logos">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="team-logo" src={asset("/images/lunova-logo.svg")} alt="Lunova OrthoPrint logo" width={140} height={110} />
+            <img className="team-logo" src={asset("/images/lunova-logo.svg")} alt="Lunova logo" width={140} height={125} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={asset("/images/school-logo.png")} alt={`${school} logo`} width={72} height={72} />
           </div>
