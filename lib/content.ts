@@ -358,11 +358,10 @@ export const school = "Gladys Porter Early College High School";
 export const team = [
   {
     name: "Gertrudis Hernandez",
-    photo: "/images/team/gertrudis.jpg",
     role: "Prototype tester, design coordinator, expert outreach and brainstorm sketches",
   },
-  { name: "Jose P. Hernandez", photo: "/images/team/jose.jpg", role: "CAD, technical drawings and 3D printing specialist" },
-  { name: "Nancy De La Cruz", photo: "/images/team/nancy.jpg", role: "Prototype tester, managing editor, sketches and designs" },
+  { name: "Jose P. Hernandez", role: "CAD, technical drawings and 3D printing specialist" },
+  { name: "Nancy De La Cruz", role: "Prototype tester, managing editor, sketches and designs" },
 ];
 
 export const teachers = "Lupita C. Vasquez and Claudia Cortez";

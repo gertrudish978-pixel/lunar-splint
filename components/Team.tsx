@@ -1,5 +1,4 @@
 import { school, team, teachers, teamName } from "@/lib/content";
-import { asset } from "@/lib/asset";
 
 export default function Team() {
   return (
@@ -12,8 +11,6 @@ export default function Team() {
         <div className="team">
           {team.map((m) => (
             <div className="member" key={m.name}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="headshot" src={asset(m.photo)} alt={`Headshot of ${m.name}`} loading="lazy" />
               <h3>{m.name}</h3>
               <span>{m.role}</span>
             </div>
