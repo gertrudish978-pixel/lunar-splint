@@ -375,8 +375,6 @@ export const siteUrl = "https://gertrudish978-pixel.github.io/lunar-splint/";
 // The team's own shared documents, linked from the last slide of our presentation.
 export const digitalRecords = [
   { label: "Engineering notebook (D.A.A.N.)", href: "https://docs.google.com/document/d/1hKhcNnmtno6e4WYorjXT1Oe3MqVzv_eXaMi5e8vBHBI/edit?usp=sharing" },
-  { label: "Problem statement", href: "https://docs.google.com/document/d/1np4IYU2kg3Toc2JTO7HXkjL3HSx_v_YMV_1JqnkxwXY/edit?usp=sharing" },
-  { label: "Needs Assessment Survey results", href: "https://docs.google.com/document/d/1bgVcsqcsD2ueFd9Aoes3MxxKUOwubQQHS9IAxuHU4xI/edit?usp=sharing" },
   { label: "Presentation deck (Canva)", href: "https://canva.link/qrdwet2jf7sb0ju" },
   { label: "Brochure (PDF)", href: "https://gertrudish978-pixel.github.io/lunar-splint/docs/OrthoPrint-brochure.pdf" },
   { label: "Presentation board (PDF)", href: "https://gertrudish978-pixel.github.io/lunar-splint/docs/OrthoPrint-display-board.pdf" },
