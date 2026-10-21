@@ -232,6 +232,12 @@ export const gallery = [
     contain: true,
   },
   {
+    src: "/images/ziptie-reusable.jpg",
+    alt: "Reusable, releasable zip tie with a buckle that can be opened and tightened again.",
+    caption: "Reusable zip tie: it locks in steps like a normal zip tie but can be released and used again. This is the idea behind our one-piece straps",
+    meta: "Web research · MakerWorld model",
+  },
+  {
     src: "/images/sam-splint-xl.jpg",
     alt: "Orange SAM Splint XL package on a table.",
     caption: "SAM Splint XL from our school's athletic trainer, used for larger limbs",
