@@ -42,12 +42,17 @@ export default function Footer() {
         <div>
           <h3>Project</h3>
           <ol className="plain">
-            {digitalRecords.map((r) => (
+            {digitalRecords.filter((r) => !r.label.includes("D.A.A.N.")).map((r) => (
               <li key={r.href}>
                 <a href={r.href} {...ext}>{r.label}</a>
               </li>
             ))}
             <li><a href="https://www.nasahunch.com/" {...ext}>About NASA HUNCH</a></li>
+            {digitalRecords.filter((r) => r.label.includes("D.A.A.N.")).map((r) => (
+              <li key={r.href}>
+                <a href={r.href} {...ext}>{r.label}</a>
+              </li>
+            ))}
             <li>
               <a href="https://makerworld.com/en/models/236391-reusable-zip-tie" {...ext}>
                 Reusable zip tie model (closure inspiration)

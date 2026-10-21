@@ -374,10 +374,10 @@ export const siteUrl = "https://gertrudish978-pixel.github.io/lunar-splint/";
 
 // The team's own shared documents, linked from the last slide of our presentation.
 export const digitalRecords = [
-  { label: "Engineering notebook (D.A.A.N.)", href: "https://docs.google.com/document/d/1hKhcNnmtno6e4WYorjXT1Oe3MqVzv_eXaMi5e8vBHBI/edit?usp=sharing" },
-  { label: "Presentation deck (Canva)", href: "https://canva.link/qrdwet2jf7sb0ju" },
-  { label: "Brochure (PDF)", href: "https://gertrudish978-pixel.github.io/lunar-splint/docs/OrthoPrint-brochure.pdf" },
   { label: "Presentation board (PDF)", href: "https://gertrudish978-pixel.github.io/lunar-splint/docs/OrthoPrint-display-board.pdf" },
+  { label: "Brochure (PDF)", href: "https://gertrudish978-pixel.github.io/lunar-splint/docs/OrthoPrint-brochure.pdf" },
+  { label: "Presentation deck (Canva)", href: "https://canva.link/qrdwet2jf7sb0ju" },
+  { label: "Engineering notebook (D.A.A.N.)", href: "https://docs.google.com/document/d/1hKhcNnmtno6e4WYorjXT1Oe3MqVzv_eXaMi5e8vBHBI/edit?usp=sharing" },
 ];
 
 // Problem statement, from our presentation.
@@ -431,7 +431,7 @@ export const pdrChecklist: { item: string; href?: string; status: Status; note?:
   { item: "Presentation header", href: "#header", status: "done" },
   { item: "Team", href: "/team/", status: "done" },
   { item: "Presentation board (tri-fold)", href: "#board", status: "wip", note: "Board design is below; add a photo once it is printed" },
-  { item: "Engineering notebook (D.A.A.N.)", href: digitalRecords[0].href, status: "done" },
+  { item: "Engineering notebook (D.A.A.N.)", href: digitalRecords.find((r) => r.label.includes("D.A.A.N."))!.href, status: "done" },
   { item: "Problem statement", href: "/challenge/#problem", status: "done" },
   { item: "Criteria and constraints", href: "/challenge/#criteria", status: "done" },
   { item: "Requirements", href: "/challenge/#requirements", status: "done" },
