@@ -383,6 +383,7 @@ export const digitalRecords = [
   { label: "Presentation board (PDF)", href: "https://gertrudish978-pixel.github.io/lunar-splint/docs/OrthoPrint-display-board.pdf" },
   { label: "Brochure (PDF)", href: "https://gertrudish978-pixel.github.io/lunar-splint/docs/OrthoPrint-brochure.pdf" },
   { label: "Presentation deck (Canva)", href: "https://canva.link/qrdwet2jf7sb0ju" },
+  { label: "Class presentation (Canva)", href: "https://canva.link/h0dbxqv968qqk3u" },
   { label: "Engineering notebook (D.A.A.N.)", href: "https://docs.google.com/document/d/1hKhcNnmtno6e4WYorjXT1Oe3MqVzv_eXaMi5e8vBHBI/edit?usp=sharing" },
 ];
 
